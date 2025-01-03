@@ -16,6 +16,41 @@
         header {
             padding: 50px 20px;
             background: #121212;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ccc;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #00b1d4;
+        }
+
+        .theme-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ccc;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .theme-button:hover {
+            background-color: #00b1d4;
+            color: #fff;
         }
 
         h1 {
@@ -70,21 +105,39 @@
             font-size: 0.9rem;
         }
     </style>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.style.backgroundColor === 'white') {
+                body.style.backgroundColor = '#000';
+                body.style.color = '#fff';
+            } else {
+                body.style.backgroundColor = 'white';
+                body.style.color = '#000';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
+        <button class="theme-button" onclick="toggleTheme()">Tema</button>
+        <nav>
+            <a href="#premium">Premium</a>
+            <a href="#comandos">Comandos</a>
+            <a href="#termos">Termos</a>
+        </nav>
         <h1>Magic BOT</h1>
         <p>Mais que um simples bot do Discord. O Magic é um bot multifuncional com vários sistemas inovadores e divertidos.</p>
         <a href="#" class="button">Me Adicione</a>
     </header>
 
-    <section class="section">
+    <section class="section" id="premium">
         <h2>Sobre o Magic</h2>
         <p>Sou um simples bot do Discord com várias funções, utilidades e variedades de comandos para deixar seu servidor mais seguro e divertido.</p>
         <p>Fui criado pelo dantax7 e desenvolvido com 100% de dedicação!</p>
     </section>
 
-    <section class="section">
+    <section class="section" id="comandos">
         <h2>Principais Categorias de Funções do Magic</h2>
         <div class="category">
             <img src="https://cdn.discordapp.com/icons/123456789012345678/abc123def4567890.png" alt="Moderation Icon">
@@ -103,8 +156,18 @@
         </div>
     </section>
 
+    <section class="section" id="termos">
+        <h2>Termos de Uso</h2>
+        <p>Aqui estarão os termos e condições de uso do Magic Bot.</p>
+    </section>
+
     <footer>
         © 2025 Magic Bot. Todos os direitos reservados.
     </footer>
 </body>
 </html>
+
+
+       
+  
+    
