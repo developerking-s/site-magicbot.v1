@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head> 
-   <meta property="og:title" content="Site do Magic Bot">
+    <meta property="og:title" content="Site do Magic Bot">
     <meta property="og:description" content="Sou um simples bot do Discord com várias funções, utilidades e variedades de comandos para deixar seu servidor mais seguro e divertido.">
     <meta property="og:image" content="https://cloud-f8yf41iud-hack-club-bot.vercel.app/2hollow-knight-png-images-hd.png">
     <meta name="theme-color" content="#ffffff">
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Bot</title>
     <style>
@@ -77,12 +77,22 @@
         h1 {
             font-size: 3rem;
             margin: 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
         }
 
         p {
             margin: 20px 0;
             font-size: 1.2rem;
             color: #ccc;
+            opacity: 0;
+            animation: fadeIn 2s forwards 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         .section {
@@ -204,8 +214,3 @@
     </footer>
 </body>
 </html>
-
-
-       
-  
-    
