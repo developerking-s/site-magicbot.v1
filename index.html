@@ -24,9 +24,7 @@
         }
 
         nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            margin-top: 20px;
         }
 
         nav a {
@@ -40,16 +38,24 @@
             color: #00b1d4;
         }
 
-        .theme-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: #ccc;
-            color: #000;
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .theme-button, .add-button {
+            padding: 10px 20px;
             border: none;
             border-radius: 8px;
-            padding: 5px 10px;
+            font-size: 1.2rem;
             cursor: pointer;
+        }
+
+        .theme-button {
+            background-color: #ccc;
+            color: #000;
         }
 
         .theme-button:hover {
@@ -58,16 +64,10 @@
         }
 
         .add-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
             background-color: #00b1d4;
             color: #fff;
-            font-size: 1.2rem;
-            font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         .add-button:hover {
@@ -95,63 +95,11 @@
             }
         }
 
-        .section {
-            padding: 50px 20px;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .section p {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .category {
-            display: inline-block;
-            padding: 20px;
-            margin: 10px;
-            background-color: #121212;
-            border-radius: 10px;
-            text-align: center;
-            width: 250px;
-        }
-
-        .category img {
-            width: 100px;
-            height: 100px;
-        }
-
-        .category h3 {
-            font-size: 1.5rem;
-            color: #00b1d4;
-        }
-
         footer {
             background: #121212;
             padding: 20px;
             color: #666;
             font-size: 0.9rem;
-        }
-
-        .embed {
-            display: inline-block;
-            background-color: #121212;
-            padding: 20px;
-            margin: 10px;
-            width: 200px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .embed h4 {
-            color: #00b1d4;
-        }
-
-        .embed p {
-            color: #ccc;
         }
     </style>
     <script>
@@ -169,7 +117,10 @@
 </head>
 <body>
     <header>
-        <button class="theme-button" onclick="toggleTheme()">Tema</button>
+        <div class="button-container">
+            <button class="theme-button" onclick="toggleTheme()">Tema</button>
+            <a href="https://discord.com/oauth2/authorize?client_id=1046517202121146409&scope=bot%20applications.commands&permissions=0" class="add-button">Me Adicione</a>
+        </div>
         <nav>
             <a href="premium.html">Premium</a>
             <a href="comandos.html">Comandos</a>
@@ -177,38 +128,7 @@
         </nav>
         <h1>Bem-Vindo(a) ao Website do Magic Bot</h1>
         <p>Olá, meu nome é Magic Bot e sou um bot avançado do Discord desenvolvido para trazer uma experiência divertida e funcional aos servidores. Meu foco está em áreas como economia, entretenimento e moderação, sempre buscando facilitar a administração e garantir a diversão dos membros.</p>
-        <a href="https://discord.com/oauth2/authorize?client_id=1046517202121146409&scope=bot%20applications.commands&permissions=0" class="add-button">Me Adicione</a>
     </header>
-    <section class="section" id="comandos">
-        <h2>Principais Categorias de Funções do Magic</h2>
-        <div class="category">
-            <img src="https://cdn.discordapp.com/attachments/1291176131562573876/1324822349325013154/distintivo.png?ex=67798c76&is=67783af6&hm=dd822ae46d859fad70564feb025a2b3ba532ff7f469838ea4cb04effbc54face&" alt="Moderation Icon">
-            <h3>Moderação</h3>
-            <p>Ferramentas para garantir a ordem em comunidades online, incluindo banimento, expulsão, silenciamento e trancar canais, aplicadas para manter o respeito e a segurança.</p>
-        </div>
-        <div class="category">
-            <img src="https://cdn.discordapp.com/attachments/1291176131562573876/1324822645841068133/economia-verde.png?ex=67798cbc&is=67783b3c&hm=8d348caaaf912af0f3579d42968e956249986b4f6e4c03277f4fc0092f24ed26&" alt="Economy Icon">
-            <h3>Economia</h3>
-            <p>Conjunto de ferramentas que envolve apostas, coletas, pagamentos e investimentos, permitindo aos usuários gerenciar e crescer seu saldo dentro da plataforma.</p>
-        </div>
-        <div class="category">
-            <img src="https://cdn.discordapp.com/attachments/1291176131562573876/1324823090630361099/rir.png?ex=67798d26&is=67783ba6&hm=aec2de3a1e17408319d21fabb053a2ad4cd255fa90355e3487447306ac859919&" alt="Fun Icon">
-            <h3>Sociais</h3>
-            <p>Comandos sociais para aumentar seguidores, curtidas e engajamento, especialmente em eventos como casamentos etc.</p>
-        </div>
-    </section>
-
-    <section>
-        <div class="embed">
-            <h4>+35 Servidores</h4>
-            <p></p>
-        </div>
-        <div class="embed">
-            <h4>+8.000 Usuários</h4>
-            <p></p>
-        </div>
-    </section>
-
     <footer>
         © 2025 Magic Bot. Todos os direitos reservados.
     </footer>
